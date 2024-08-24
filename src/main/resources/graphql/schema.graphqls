@@ -1,0 +1,23 @@
+type Query {
+    getEtudiant(id: ID!): Etudiant
+    getTousLesEtudiants: [Etudiant]
+    getCours(id: ID!): Cours
+    getTousLesCours: [Cours]
+}
+
+type Mutation {
+    ajouterEtudiant(nom: String!, prenom: String!): Etudiant
+    ajouterCours(titre: String!, description: String!): Cours
+}
+
+type Etudiant {
+    id: ID!
+    nom: String!
+    prenom: String!
+}
+
+type Cours {
+    id: ID!
+    titre: String!
+    description: String!
+}
